@@ -10,7 +10,7 @@ BigQuery: Summary
 
 ## CAST
 
-Convert the data type.
+Convert the data type.<br />
 Example:
 
 ```sql
@@ -19,7 +19,7 @@ CAST(id as INT64)
 
 ## REGEXP_CONTAINS
 
-True if the field matches with the regex expression.
+True if the field matches with the regex expression.<br />
 Example:
 
 ```sql
@@ -28,7 +28,7 @@ Example:
 
 ## LAG
 
-Returns the field value of the previous row.
+Returns the field value of the previous row.<br />
 Example:
 
 ```sql
