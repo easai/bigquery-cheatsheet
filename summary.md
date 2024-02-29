@@ -15,7 +15,7 @@ Convert the data type.<br />
 Example:
 
 ```sql
-CAST(id as INT64)
+CAST(id AS INT64)
 ```
 
 ## REGEXP_CONTAINS
@@ -26,6 +26,7 @@ Example:
 ```sql
  REGEXP_CONTAINS(c.text, r"(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)")
  ```
+[stackoverflow-ip-address/script.sql](https://github.com/easai/stackoverflow-ip-address/blob/main/script.sql)
 
 ## LAG
 
