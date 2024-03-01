@@ -8,7 +8,7 @@ BigQuery: Summary
   - [REGEXP_CONTAINS](#regexp_contains)
   - [LAG](#lag)
   - [ARRAY_AGG](#array_agg)
-  - [Confidence Interval](#confidenceinterval)
+  - [Confidence Interval](#confidence-interval)
 
 
 ## CAST
