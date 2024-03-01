@@ -4,9 +4,11 @@ BigQuery: Summary
 ## Contents
 
   - [CAST](#cast)
+  - [COUNTIF](#countif)
   - [REGEXP_CONTAINS](#regexp_contains)
   - [LAG](#lag)
   - [ARRAY_AGG](#array_agg)
+  - [Confidence Interval](#confidenceinterval)
 
 
 ## CAST
@@ -26,7 +28,7 @@ Example:
 ```sql
 COUNTIF(tip_threshold_exceeded = 1) AS tip_threshold_exceeded_count
 ```
-Source: (fare_amount)[https://github.com/easai/fare-amount]
+Source: [fare_amount](https://github.com/easai/fare-amount/blob/main/script.sql)
 
 ## REGEXP_CONTAINS
 
@@ -52,7 +54,7 @@ Example:
     ELSE 'Stable'
   END AS avg_weight_trend
  ```
-Source: [hash-block](https://github.com/easai/hash-block)
+Source: [hash-block](https://github.com/easai/hash-block/blob/main/script.sql)
 
 ## ARRAY_AGG
 
@@ -62,6 +64,15 @@ Example:
 ```sql
 ARRAY_AGG(`hash` ORDER BY size DESC LIMIT 1)[OFFSET(0)] AS largest_block_hash
  ```
-Source: [hash-block](https://github.com/easai/hash-block)
+Source: [hash-block](https://github.com/easai/hash-block/blob/main/script.sql)
 
+## Confidence Interval
 
+Calculates 95% confidence interval.<br />
+Example:
+
+```sql
+    gdm.sample_average + (1.96 * gdm.pop_stddev / SQRT(sc.species_count)) AS upper_bound,
+    gdm.sample_average - (1.96 * gdm.pop_stddev / SQRT(sc.species_count)) AS lower_bound
+```
+Source: [confidence-interval](https://github.com/easai/confidence-interval/blob/main/script.sql)
