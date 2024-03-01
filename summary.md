@@ -11,12 +11,22 @@ BigQuery: Summary
 
 ## CAST
 
-Convert the data type.<br />
+Converts the data type.<br />
 Example:
 
 ```sql
 CAST(id AS INT64)
 ```
+
+## COUNTIF
+
+Counts if true.<br />
+Example:
+
+```sql
+COUNTIF(tip_threshold_exceeded = 1) AS tip_threshold_exceeded_count
+```
+Source: (fare_amount)[https://github.com/easai/fare-amount]
 
 ## REGEXP_CONTAINS
 
@@ -26,7 +36,7 @@ Example:
 ```sql
  REGEXP_CONTAINS(c.text, r"(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)")
  ```
-[stackoverflow-ip-address/script.sql](https://github.com/easai/stackoverflow-ip-address/blob/main/script.sql)
+Source: [stackoverflow-ip-address/script.sql](https://github.com/easai/stackoverflow-ip-address/blob/main/script.sql)
 
 ## LAG
 
@@ -42,6 +52,7 @@ Example:
     ELSE 'Stable'
   END AS avg_weight_trend
  ```
+Source: [hash-block](https://github.com/easai/hash-block)
 
 ## ARRAY_AGG
 
@@ -51,5 +62,6 @@ Example:
 ```sql
 ARRAY_AGG(`hash` ORDER BY size DESC LIMIT 1)[OFFSET(0)] AS largest_block_hash
  ```
+Source: [hash-block](https://github.com/easai/hash-block)
 
 
