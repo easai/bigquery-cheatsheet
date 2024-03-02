@@ -65,14 +65,7 @@ Example:
 SELECT
     ARRAY_AGG (name)
 FROM
-    (
-        SELECT
-            name
-        FROM
-            `bigquery-public-data.san_francisco_bikeshare.bikeshare_station_info`
-        WHERE
-            name LIKE 'A%'
-    )
+    (SELECT ...)
 ```
 Source: [name-e-a](https://github.com/easai/name-e-a/blob/main/script.sql)
 
@@ -99,8 +92,7 @@ Example:
 
 ```sql
 SELECT
-  ARRAY_CONCAT((SELECT ARRAY_AGG(name) FROM (SELECT name FROM `bigquery-public-data.san_francisco_bikeshare.bikeshare_station_info` WHERE  name LIKE 'A%') )
-  , (SELECT ARRAY_AGG(name) FROM (SELECT name FROM `bigquery-public-data.san_francisco_bikeshare.bikeshare_station_info` WHERE name LIKE 'E%') ) ) AS name
+  ARRAY_CONCAT((SELECT ...), (SELECT ...)) 
 ```
 Source: [name-e-a](https://github.com/easai/name-e-a/blob/main/script.sql)
 
