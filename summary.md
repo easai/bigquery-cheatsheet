@@ -9,7 +9,7 @@ BigQuery: Summary
   - [LAG](#lag)
   - [ARRAY_AGG](#array_agg)
   - [Confidence Interval](#confidence-interval)
-
+  - [ARRAY_CONCAT](#array_concat)
 
 ## CAST
 
@@ -58,8 +58,23 @@ Source: [hash-block](https://github.com/easai/hash-block/blob/main/script.sql)
 
 ## ARRAY_AGG
 
-Returns an array.<br />
+Creates an array.<br />
 Example:
+
+```sql
+SELECT
+    ARRAY_AGG (name)
+FROM
+    (
+        SELECT
+            name
+        FROM
+            `bigquery-public-data.san_francisco_bikeshare.bikeshare_station_info`
+        WHERE
+            name LIKE 'A%'
+    )
+```
+Source: [name-e-a](https://github.com/easai/name-e-a/blob/main/script.sql)
 
 ```sql
 ARRAY_AGG(`hash` ORDER BY size DESC LIMIT 1)[OFFSET(0)] AS largest_block_hash
@@ -72,7 +87,21 @@ Calculates 95% confidence interval.<br />
 Example:
 
 ```sql
-    gdm.sample_average + (1.96 * gdm.pop_stddev / SQRT(sc.species_count)) AS upper_bound,
-    gdm.sample_average - (1.96 * gdm.pop_stddev / SQRT(sc.species_count)) AS lower_bound
+gdm.sample_average + (1.96 * gdm.pop_stddev / SQRT(sc.species_count)) AS upper_bound,
+gdm.sample_average - (1.96 * gdm.pop_stddev / SQRT(sc.species_count)) AS lower_bound
 ```
 Source: [confidence-interval](https://github.com/easai/confidence-interval/blob/main/script.sql)
+
+## ARRAY_CONCAT
+
+Concatenates arrays.<br />
+Example:
+
+```sql
+SELECT
+  ARRAY_CONCAT((SELECT ARRAY_AGG(name) FROM (SELECT name FROM `bigquery-public-data.san_francisco_bikeshare.bikeshare_station_info` WHERE  name LIKE 'A%') )
+  , (SELECT ARRAY_AGG(name) FROM (SELECT name FROM `bigquery-public-data.san_francisco_bikeshare.bikeshare_station_info` WHERE name LIKE 'E%') ) ) AS name
+```
+Source: [name-e-a](https://github.com/easai/name-e-a/blob/main/script.sql)
+
+
