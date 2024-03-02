@@ -10,3 +10,4 @@ BigQuery Cheetsheet
     - [LAG](summary.md#lag)
     - [ARRAY_AGG](summary.md#array_agg)
     - [Confidence Interval](summary.md#confidence-interval)
+    - [ARRAY_CONCAT](summary.md#array_concat)
