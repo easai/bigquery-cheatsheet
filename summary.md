@@ -10,6 +10,10 @@ BigQuery: Summary
   - [ARRAY_AGG](#array_agg)
   - [Confidence Interval](#confidence-interval)
   - [ARRAY_CONCAT](#array_concat)
+  - [ARRAY_TO_STRING](#array_to_string)
+  - [Median](#median)
+  - [FORMAT_DATE](#format_date)
+  - [DATE_TRUNC](#date_trunc)
 
 ## CAST
 
@@ -96,4 +100,49 @@ SELECT
 ```
 Source: [name-e-a](https://github.com/easai/name-e-a/blob/main/script.sql)
 
+## ARRAY_TO_STRING
+
+Joins elements with arg and creates a string.<br />
+Example:
+
+```sql
+SELECT
+  ARRAY_TO_STRING([state_abbreviation, name], '-') AS airport_info
+```
+Source: [highest-airport](https://github.com/easai/highest-airport/blob/main/script.sql)
+
+## Median
+
+Calculates the median value.<br />
+Example:
+
+```sql
+SELECT
+  PERCENTILE_CONT(passenger_count, 0.5) OVER () AS median_passenger_count
+```
+Source: [median-passenger-count](https://github.com/easai/median-passenger-count/blob/main/script.sql)
+
+
+## FORMAT_DATE
+
+Formats the date.<br />
+Example:
+
+```sql
+SELECT
+  FORMAT_DATE ("%b %Y", report_month) AS formatted_month
+```
+Source: [salmonella](https://github.com/easai/salmonella/blob/main/script.sql)
+
+
+## DATE_TRUNC
+
+Extract the specified component from a date.<br />
+Example:
+
+```sql
+SELECT
+  DATE_TRUNC (report_date, MONTH) AS report_month
+```
+Source: [salmonella](https://github.com/easai/salmonella/blob/main/script.sql)
 
