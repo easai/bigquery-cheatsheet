@@ -14,6 +14,7 @@ BigQuery: Summary
   - [Median](#median)
   - [FORMAT_DATE](#format_date)
   - [DATE_TRUNC](#date_trunc)
+  - [DATE_SUB](#date_sub)
 
 ## CAST
 
@@ -145,4 +146,16 @@ SELECT
   DATE_TRUNC (report_date, MONTH) AS report_month
 ```
 Source: [salmonella](https://github.com/easai/salmonella/blob/main/script.sql)
+
+
+## DATE_SUB
+
+Subtract the specified amount from a date.<br />
+Example:
+
+```sql
+WHERE
+  i.established_date >= DATE_SUB (CURRENT_DATE(), INTERVAL 20 YEAR)
+```
+Source: [fdic-bank-list](https://github.com/easai/fdic-bank-list/blob/main/script.sql)
 
