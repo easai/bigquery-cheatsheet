@@ -16,6 +16,16 @@ BigQuery: Summary
   - [DATE_TRUNC](#date_trunc)
   - [DATE_SUB](#date_sub)
 
+## Not implemented
+- ARRAY_IS_DISTINCT
+- ARRAY_INCLUDES_ANY
+- ARRAY_MAX
+- ARRAY_MIN
+- ARRAY_CONCAT_AGG
+- ARRAY_FILTER
+- ARRAY_INCLUDES
+
+
 ## CAST
 
 Converts the data type.<br />
