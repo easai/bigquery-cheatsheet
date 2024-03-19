@@ -1,7 +1,7 @@
 BigQuery Cheetsheet
 ===================
 
-    ## Contents
+## Contents
 
   - [Summary](summary.md)
     - [00 Not implemented](summary.md#00-not-implemented)
