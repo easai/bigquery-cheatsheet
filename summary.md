@@ -30,7 +30,7 @@ BigQuery: Summary
 
 ## ARRAY_AGG
 
-Creates an array.<br /><br /><br />Example:
+Creates an array.<br /><br />Example:
 
 ```sql
 SELECT
@@ -38,7 +38,7 @@ SELECT
 FROM
     (SELECT ...)
 ```
-<br /><br />Example:
+<br />Example:
 
 ```sql
 ARRAY_AGG(`hash` ORDER BY size DESC LIMIT 1)[OFFSET(0)] AS largest_block_hash
@@ -47,7 +47,7 @@ ARRAY_AGG(`hash` ORDER BY size DESC LIMIT 1)[OFFSET(0)] AS largest_block_hash
 
 ## ARRAY_CONCAT
 
-Concatenates arrays.<br /><br /><br />Example:
+Concatenates arrays.<br /><br />Example:
 
 ```sql
 SELECT
@@ -57,7 +57,7 @@ SELECT
 
 ## ARRAY_TO_STRING
 
-Joins elements with arg and creates a string.<br /><br /><br />Example:
+Joins elements with arg and creates a string.<br /><br />Example:
 
 ```sql
 SELECT
@@ -76,7 +76,7 @@ CAST(id AS INT64)
 
 ## Confidence Interval
 
-Calculates 95% confidence interval.<br /><br /><br />Example:
+Calculates 95% confidence interval.<br /><br />Example:
 
 ```sql
 gdm.sample_average + (1.96 * gdm.pop_stddev / SQRT(sc.species_count)) AS upper_bound,
@@ -86,7 +86,7 @@ gdm.sample_average - (1.96 * gdm.pop_stddev / SQRT(sc.species_count)) AS lower_b
 
 ## COUNTIF
 
-Counts if true.<br /><br /><br />Example:
+Counts if true.<br /><br />Example:
 
 ```sql
 COUNTIF(tip_threshold_exceeded = 1) AS tip_threshold_exceeded_count
@@ -96,7 +96,7 @@ COUNTIF(tip_threshold_exceeded = 1) AS tip_threshold_exceeded_count
 ## DATE_SUB
 
 Subtract the specified amount from a date.<br />
-<br /><br />Example:
+<br />Example:
 
 ```sql
 WHERE
@@ -106,7 +106,7 @@ WHERE
 
 ## DATE_TRUNC
 
-Extract the specified component from a date.<br /><br /><br />Example:
+Extract the specified component from a date.<br /><br />Example:
 
 ```sql
 SELECT
@@ -116,7 +116,7 @@ SELECT
 
 ## FORMAT_DATE
 
-Formats the date.<br /><br /><br />Example:
+Formats the date.<br /><br />Example:
 
 ```sql
 SELECT
@@ -126,7 +126,7 @@ SELECT
 
 ## LAG
 
-Returns the field value of the previous row.<br /><br /><br />Example:
+Returns the field value of the previous row.<br /><br />Example:
 
 ```sql
   CASE 
@@ -141,7 +141,7 @@ Returns the field value of the previous row.<br /><br /><br />Example:
 
 ## Median
 
-Calculates the median value.<br /><br /><br />Example:
+Calculates the median value.<br /><br />Example:
 
 ```sql
 SELECT
@@ -151,7 +151,7 @@ SELECT
 
 ## REGEXP_CONTAINS
 
-True if the field matches with the regex expression.<br /><br /><br />Example:
+True if the field matches with the regex expression.<br /><br />Example:
 
 ```sql
  REGEXP_CONTAINS(c.text, r"(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)")
