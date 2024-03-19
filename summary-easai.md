@@ -30,7 +30,8 @@ BigQuery: Summary
 
 ## ARRAY_AGG
 
-Creates an array.<br />Example:
+Creates an array.<br />
+Example:
 
 ```sql
 SELECT
@@ -39,6 +40,7 @@ FROM
     (SELECT ...)
 ```
 Source: [name-e-a](https://github.com/easai/name-e-a/blob/main/script.sql)
+
 Example:
 
 ```sql
@@ -49,7 +51,8 @@ Source: [hash-block](https://github.com/easai/hash-block/blob/main/script.sql)
 
 ## ARRAY_CONCAT
 
-Concatenates arrays.<br />Example:
+Concatenates arrays.<br />
+Example:
 
 ```sql
 SELECT
@@ -60,7 +63,8 @@ Source: [name-e-a](https://github.com/easai/name-e-a/blob/main/script.sql)
 
 ## ARRAY_TO_STRING
 
-Joins elements with arg and creates a string.<br />Example:
+Joins elements with arg and creates a string.<br />
+Example:
 
 ```sql
 SELECT
@@ -80,7 +84,8 @@ CAST(id AS INT64)
 
 ## Confidence Interval
 
-Calculates 95% confidence interval.<br />Example:
+Calculates 95% confidence interval.<br />
+Example:
 
 ```sql
 gdm.sample_average + (1.96 * gdm.pop_stddev / SQRT(sc.species_count)) AS upper_bound,
@@ -91,7 +96,8 @@ Source: [confidence-interval](https://github.com/easai/confidence-interval/blob/
 
 ## COUNTIF
 
-Counts if true.<br />Example:
+Counts if true.<br />
+Example:
 
 ```sql
 COUNTIF(tip_threshold_exceeded = 1) AS tip_threshold_exceeded_count
@@ -102,6 +108,7 @@ Source: [fare_amount](https://github.com/easai/fare-amount/blob/main/script.sql)
 ## DATE_SUB
 
 Subtract the specified amount from a date.<br />
+
 Example:
 
 ```sql
@@ -113,7 +120,8 @@ Source: [fdic-bank-list](https://github.com/easai/fdic-bank-list/blob/main/scrip
 
 ## DATE_TRUNC
 
-Extract the specified component from a date.<br />Example:
+Extract the specified component from a date.<br />
+Example:
 
 ```sql
 SELECT
@@ -124,7 +132,8 @@ Source: [salmonella](https://github.com/easai/salmonella/blob/main/script.sql)
 
 ## FORMAT_DATE
 
-Formats the date.<br />Example:
+Formats the date.<br />
+Example:
 
 ```sql
 SELECT
@@ -135,7 +144,8 @@ Source: [salmonella](https://github.com/easai/salmonella/blob/main/script.sql)
 
 ## LAG
 
-Returns the field value of the previous row.<br />Example:
+Returns the field value of the previous row.<br />
+Example:
 
 ```sql
   CASE 
@@ -151,7 +161,8 @@ Source: [hash-block](https://github.com/easai/hash-block/blob/main/script.sql)
 
 ## Median
 
-Calculates the median value.<br />Example:
+Calculates the median value.<br />
+Example:
 
 ```sql
 SELECT
@@ -162,7 +173,8 @@ Source: [median-passenger-count](https://github.com/easai/median-passenger-count
 
 ## REGEXP_CONTAINS
 
-True if the field matches with the regex expression.<br />Example:
+True if the field matches with the regex expression.<br />
+Example:
 
 ```sql
  REGEXP_CONTAINS(c.text, r"(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)")
