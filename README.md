@@ -1,14 +1,15 @@
 BigQuery Cheetsheet
 ===================
 
-## Contents
+    ## Contents
 
   - [Summary](summary.md)
+    - [00 Not implemented](summary.md#00-not-implemented)
     - [ARRAY_AGG](summary.md#array_agg)
     - [ARRAY_CONCAT](summary.md#array_concat)
     - [ARRAY_TO_STRING](summary.md#array_to_string)
     - [CAST](summary.md#cast)
-    - [Confidence Interval](summary.md#confidence_interval)
+    - [Confidence Interval](summary.md#confidence-interval)
     - [COUNTIF](summary.md#countif)
     - [DATE_SUB](summary.md#date_sub)
     - [DATE_TRUNC](summary.md#date_trunc)
